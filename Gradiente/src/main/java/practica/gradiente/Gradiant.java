@@ -8,7 +8,7 @@ public class Gradiant {
     private double a;
     
     //Constructor
-    public Gradiant(){  this.a = 0.000543; }
+    public Gradiant(){  this.a = 0.00053; }
     
     public void setA(double aux){   this.a = aux;   }
     public double getA(){   return this.a;  }
@@ -30,6 +30,11 @@ public class Gradiant {
             
             aux = helper.Error(c.getBeta0(), c.getBeta1());
             System.out.println("error dentro del for: " + aux);
+            
+            if(aux > error){
+                System.out.println("\nNo decrementa\n");
+                break;
+            }
             
             if(aux < 0){
                 System.out.println("\nConverge\n");
